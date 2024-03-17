@@ -3,7 +3,7 @@ import RollNo from "../widgets/RollNo";
 
 const Counter = () => {
   return (
-    <div className="bg-gradient-to-r from-sky-500 to-blue-700 py-14   flex justify-around shadow-inner">
+    <div className="bg-gradient-to-r from-blue-800 to-indigo-900 py-14   flex justify-around shadow-inner">
       <div className="flex flex-col sm:flex-row gap-6 md:gap-12 lg:gap-20 xl:gap-32">
         <div className=" text-center font-bold text-white">
           <RollNo number={705} />
