@@ -21,9 +21,9 @@ function App() {
         <Introduction />
       </div>
       <Counter />
-      <div className="mx-auto   bg-blue-100 w-full flex justify-center items center ">
+      {/* <div className="mx-auto   bg-blue-100 w-full flex justify-center items center ">
         <Research />
-      </div>
+      </div> */}
       <div className="flex justify-center">
         <ImportantDates />
       </div>

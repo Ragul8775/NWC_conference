@@ -18,35 +18,35 @@ const PriceTabe1 = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b text-wrap dark:bg-gray-800 dark:border-gray-700">
             <th
               scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-wrap dark:text-white"
+              className="px-6 py-4 font-medium  text-gray-900 whitespace-nowrap text-wrap dark:text-white"
             >
               Student ( UG / PG / Research Scholar)
             </th>
-            <td className="px-6 py-4">5000</td>
-            <td className="px-6 py-4">4000</td>
+            <td className="px-6 py-4">-/</td>
+            <td className="px-6 py-4">-/</td>
           </tr>
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <th
               scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-wrap text-gray-900 whitespace-nowrap dark:text-white"
             >
               Faculty / Academician
             </th>
-            <td className="px-6 py-4">6000</td>
-            <td className="px-6 py-4">5000 </td>
+            <td className="px-6 py-4">-/</td>
+            <td className="px-6 py-4">-/ </td>
           </tr>
           <tr className="bg-white dark:bg-gray-800">
             <th
               scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-wrap text-gray-900 whitespace-nowrap dark:text-white"
             >
               Corporate Sector / Others
             </th>
-            <td className="px-6 py-4">9000</td>
-            <td className="px-6 py-4">7000</td>
+            <td className="px-6 py-4">-/</td>
+            <td className="px-6 py-4">-/</td>
           </tr>
         </tbody>
       </table>
@@ -72,8 +72,8 @@ const PriceTabe1 = () => {
             >
               Academic / Research Scholar / Corporate Sector
             </th>
-            <td className="px-6 py-4">230</td>
-            <td className="px-6 py-4">180</td>
+            <td className="px-6 py-4">-/</td>
+            <td className="px-6 py-4">-/</td>
           </tr>
         </tbody>
       </table>

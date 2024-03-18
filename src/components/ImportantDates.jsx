@@ -1,5 +1,5 @@
 import React from "react";
-import poster from "../assets/poster.webp";
+import poster from "../assets/banner.jpg";
 const ImportantDates = () => {
   return (
     <div className="px-6 bg-white my-6 text-gray-500 max-w-7xl w-full">
@@ -24,7 +24,7 @@ const ImportantDates = () => {
                   Submission of Abstract
                 </th>
                 <td className="px-6 py-4">
-                  25th January, 2023 (Extended till 07th Feb, 2023)
+                  15th August, 2025 
                 </td>
               </tr>
               <tr className="bg-white border ">
@@ -35,7 +35,7 @@ const ImportantDates = () => {
                   Submission of Full Paper
                 </th>
                 <td className="px-6 py-4">
-                  31st January, 2023 (Extended till 14th Feb, 2023)
+                  20th August, 2025 
                 </td>
               </tr>
               <tr className="bg-white border ">
@@ -46,7 +46,7 @@ const ImportantDates = () => {
                   Authors Notification
                 </th>
                 <td className="px-6 py-4">
-                  25th February, 2023 (Extended till 11th March, 2023)
+                  28th August, 2025 
                 </td>
               </tr>
               <tr className="bg-white border ">
@@ -57,7 +57,7 @@ const ImportantDates = () => {
                   Final Manuscript Due
                 </th>
                 <td className="px-6 py-4">
-                  04th March, 2023 (Extended till 18th March, 2023)
+                  10th September, 2025 
                 </td>
               </tr>
             </tbody>

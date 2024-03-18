@@ -68,7 +68,7 @@ const GuestandHonors = () => {
           <hr className="w-1 h-1   bg-blue-500 border-0 rounded  " />
           <hr className="w-16 h-1   bg-blue-500 border-0 rounded  " />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div className="flex justify-center items-center gap-4 mb-8">
           <TeamMember
             name="Bonnie Green"
             description="Bonnie drives the technical strategy of the Themesberg platform and brand."

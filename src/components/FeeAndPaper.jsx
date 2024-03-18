@@ -29,19 +29,25 @@ const FeeAndPaper = () => {
             <hr className="w-24 h-1   bg-blue-500 border-0 rounded  " />
           </div>
           <p className="mt-4 text-xl">
-            Authors are invited to submit the papers through
-            icnwc.2023@srmist.edu.in by 31st January 2023 (Extended till 14th
-            Feb 2023). Submissions must be original and should not have been
-            published previously or be under consideration for publication while
-            being evaluated for this conference.
+          Prospective authors are kindly invited to submit full text papers including results, tables, figures, and references. Full text papers (.pdf, .doc) will be accepted by Paper Submission Link tab at the top under “About ICRTDA 2023”. All submitted articles should report original, previously unpublished research results, experimental or theoretical. Articles submitted to the Conference should meet these criteria and must not be under consideration for publication elsewhere.
           </p>
           <p className="mt-4 text-xl">
-            Accepted and presented papers will be published in the IEEE ICNWC
-            2023 Conference Proceedings and submitted to IEEE Xplore® for
-            inclusion which will be indexed in Scopus. Full details of
-            submission procedures and requirements for authors are available at
-            the conference website..
+          All registered, selected and domain specific papers will be published in UGC / Scopus / Google Scholar Indexed Journals.
           </p>
+          <ul className="text-xl list-disc mt-2">
+            <li className="mb-2 ml-4">International Journal of Communication Networks and Information Security (IJCNIS)
+</li>
+            <li className="mb-2 ml-4">Educational Administration: Theory and Practice (Scopus Indexed Journal)
+</li>
+            <li className="mb-2 ml-4">Science Progress and Research (SPR) journal 
+</li>
+            <li className="mb-2 ml-4">AIP Conference Proceedings (Awaiting Approval)
+</li>
+            <li className="mb-2 ml-4">Journal of Computer Science implications
+</li>
+            <li className="mb-2 ml-4">IOS series Journal (Awaiting Approval)
+</li>
+          </ul>
           <div className="mt-4 text-xl">
             <h2 className="font-bold">Paper submission through</h2>
             <a
