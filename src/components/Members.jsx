@@ -64,7 +64,7 @@ const MembersData = {
 
     " Dr.M.Lakshmi, Professor & Head, Data Science and Business Systems, SRMIST",
   ],
-  " CONVENER": ["Dr. M. Thenmozhi, Professor, NWC, SRMIST"],
+  " CONVENER": ["Dr. Sasikala E, Professor, DSBS, SRMIST"],
 };
 const Members = () => {
   const [activeTab, setActiveTab] = useState("CHIEF PATRONS");
