@@ -3,9 +3,34 @@ import Logo from "../assets/LOgo.png";
 import { IoCloseSharp } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
 import HoverLInk from "../widgets/HoverLInk";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to handle mobile menu toggle
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1, // Delay between each child animation
+        delayChildren: 0.2, // Initial delay before starting the children animations
+      },
+    },
+  };
+
+  // Variants for each child
+  const childVariants = {
+    hidden: { opacity: 0.5, y: -5 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 700,
+        damping: 30,
+      },
+    },
+  };
 
   return (
     <nav className="bg-light shadow-lg z-200 font-[main] font-semibold">
@@ -49,7 +74,8 @@ const Navbar = () => {
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
-            <button
+            <motion.button
+              whileTap={{ scale: 0.85 }}
               onClick={() => setIsOpen(!isOpen)}
               className="mobile-menu-button"
             >
@@ -71,26 +97,46 @@ const Navbar = () => {
                   />
                 </svg>
               )}
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
       {/* Mobile Menu */}
       <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
-        <div className="flex flex-col gap-3 py-4 items-center bg-blue-200">
-          <HoverLInk>HOME</HoverLInk>
-          <div className="flex  justify-center  px-3 hover:text-gray-900">
-            <FlyoutLink href="#" FlyoutContent={AboutContent}>
-              ABOUT
-            </FlyoutLink>
-          </div>
-          <div className="flex  justify-center   px-3 hover:text-gray-900">
-            <FlyoutLink href="#" FlyoutContent={AuthorContent}>
-              AUTHORS
-            </FlyoutLink>
-          </div>
-          <HoverLInk>CONTACT</HoverLInk>
-        </div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              className="flex flex-col gap-3 py-4 items-center bg-blue-200"
+            >
+              <motion.div variants={childVariants}>
+                <HoverLInk href="#">HOME</HoverLInk>
+              </motion.div>
+              <motion.div
+                variants={childVariants}
+                className="flex justify-center px-3 hover:text-gray-900"
+              >
+                <FlyoutLink href="#" FlyoutContent={AboutContent}>
+                  ABOUT
+                </FlyoutLink>
+              </motion.div>
+              <motion.div
+                variants={childVariants}
+                className="flex justify-center px-3 hover:text-gray-900"
+              >
+                <FlyoutLink href="#" FlyoutContent={AuthorContent}>
+                  AUTHORS
+                </FlyoutLink>
+              </motion.div>
+              <motion.div variants={childVariants}>
+                <HoverLInk href="#">CONTACT</HoverLInk>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
