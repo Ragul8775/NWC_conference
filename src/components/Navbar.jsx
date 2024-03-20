@@ -51,13 +51,13 @@ const Navbar = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
-      className={`   z-50 fixed top-0 left-0 w-full transition-all duration-300 font-[inter] font-bold ${
+      className={`   z-50 fixed top-0 left-0 w-full transition-all duration-300 font-[inter] font-bold text-lg  ${
         isScrolled
           ? "backdrop-blur-sm bg-white/40"
           : "backdrop-blur-sm bg-transparent "
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl  mx-auto px-4">
         <div className="flex justify-between md:inline ">
           <div className="flex justify-around space-x-4">
             <div>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 href="#"
                 className="flex items-center py-2 px-2 text-gray-300  "
               >
-                <img src={Logo} width={140} />
+                <img src={Logo} width={140} className="w-40 lg:w-48" />
               </a>
             </div>
             {/* Primary Navbar items */}
