@@ -64,12 +64,12 @@ const MembersData = {
 
     " Dr.M.Lakshmi, Professor & Head, Data Science and Business Systems, SRMIST",
   ],
-  " CONVENER": ["Dr. M. Thenmozhi, Professor, NWC, SRMIST"],
+  " CONVENER": ["Dr. Sasikala E, Professor, DSBS, SRMIST"],
 };
 const Members = () => {
   const [activeTab, setActiveTab] = useState("CHIEF PATRONS");
   return (
-    <div className=" bg-blue-900 text-white max-w-7xl w-full h-[700px]">
+    <div className=" bg-blue-900 text-white max-w-7xl w-full h-auto">
       <div className="flex flex-col justify-center items-center my-4">
         <h1 className="text-3xl sm:text-3xl font-medium leading-tight mb-4 text-balance text-white ">
           Important Dates

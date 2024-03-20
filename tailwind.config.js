@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "10316B",
-        primaryLight: "0B409C",
-        highlight: "FDBE34",
-        light: "F2F7FF",
+        primary: "#10316B",
+        primaryLight: "#0B409C",
+        highlight: "#FDBE34",
+        light: "#F2F7FF",
       },
       fontFamily: {
         main: ["Oswald"],
