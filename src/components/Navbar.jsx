@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../assets/LOgo.png";
 import { IoCloseSharp } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
 import HoverLInk from "../widgets/HoverLInk";
-
+import InnerLinks from "../widgets/InnerLInks";
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Set isScrolled to true if page is scrolled more than 50px, otherwise false
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    // Register the event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const [isOpen, setIsOpen] = useState(false); // State to handle mobile menu toggle
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const containerVariants = {
@@ -33,33 +47,38 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-light shadow-lg z-200 font-[main] font-semibold">
+    <motion.nav
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+      className={`   z-50 fixed top-0 left-0 w-full transition-all duration-300 font-[inter] font-bold ${
+        isScrolled
+          ? "backdrop-blur-sm bg-white/40"
+          : "backdrop-blur-sm bg-transparent "
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between md:inline ">
           <div className="flex justify-around space-x-4">
             <div>
               <a
                 href="#"
-                className="flex items-center py-2 px-2 text-gray-700 hover:text-gray-900 "
+                className="flex items-center py-2 px-2 text-gray-300  "
               >
                 <img src={Logo} width={140} />
               </a>
             </div>
             {/* Primary Navbar items */}
-            <div className="hidden md:flex items-center space-x-1">
-              <a
-                href="#"
-                className="py-5 px-3 text-gray-700 hover:text-gray-900"
-              >
-                HOME
-              </a>
-
-              <div className="flex  justify-center  py-5 px-3 hover:text-gray-900">
+            <div className="hidden md:flex items-center space-x-1 ">
+              <div className="py-5 px-3 ">
+                <HoverLInk>HOME</HoverLInk>
+              </div>
+              <div className="flex  justify-center  py-5 px-3 ">
                 <FlyoutLink href="#" FlyoutContent={AboutContent}>
                   ABOUT
                 </FlyoutLink>
               </div>
-              <div className="flex  justify-center  py-5 px-3 hover:text-gray-900 ">
+              <div className="flex  justify-center  py-5 px-3  ">
                 <FlyoutLink href="#" FlyoutContent={AuthorContent}>
                   AUTHORS
                 </FlyoutLink>
@@ -110,14 +129,18 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="flex flex-col gap-3 py-4 items-center bg-blue-200"
+              className={` flex flex-col gap-3 py-4 items-center ${
+                isScrolled
+                  ? "backdrop-blur-sm bg-white/40 "
+                  : "backdrop-blur-sm bg-transparent "
+              }`}
             >
               <motion.div variants={childVariants}>
                 <HoverLInk href="#">HOME</HoverLInk>
               </motion.div>
               <motion.div
                 variants={childVariants}
-                className="flex justify-center px-3 hover:text-gray-900"
+                className="flex justify-center px-3 "
               >
                 <FlyoutLink href="#" FlyoutContent={AboutContent}>
                   ABOUT
@@ -125,7 +148,7 @@ const Navbar = () => {
               </motion.div>
               <motion.div
                 variants={childVariants}
-                className="flex justify-center px-3 hover:text-gray-900"
+                className="flex justify-center px-3 "
               >
                 <FlyoutLink href="#" FlyoutContent={AuthorContent}>
                   AUTHORS
@@ -138,11 +161,25 @@ const Navbar = () => {
           )}
         </AnimatePresence>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
 const FlyoutLink = ({ children, href, FlyoutContent }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Set isScrolled to true if page is scrolled more than 50px, otherwise false
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    // Register the event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const [open, setOpen] = useState(false);
 
   const showFlyout = FlyoutContent && open;
@@ -153,13 +190,18 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
       onMouseLeave={() => setOpen(false)}
       className="relative w-fit h-fit "
     >
-      <a href={href} className="relative text-gray-700">
+      <a
+        href={href}
+        className={`relative ${
+          isScrolled ? "text-gray-800" : "text-gray-300 "
+        }`}
+      >
         {children}
         <span
           style={{
             transform: showFlyout ? "scaleX(1)" : "scaleX(0)",
           }}
-          className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 ease-out"
+          className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-primaryLight transition-transform duration-300 ease-out"
         />
       </a>
       <AnimatePresence>
@@ -185,10 +227,10 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
 const AboutContent = () => {
   return (
     <div className="w-64 bg-white p-6 shadow-xl ">
-      <div className="mb-3 space-y-3 flex flex-col">
-        <HoverLInk href="/">About Us</HoverLInk>
-        <HoverLInk href="/">Committee</HoverLInk>
-        <HoverLInk href="/">Speakers</HoverLInk>
+      <div className="mb-3 space-y-3 flex flex-col ">
+        <InnerLinks href="/">About Us</InnerLinks>
+        <InnerLinks href="/">Committee</InnerLinks>
+        <InnerLinks href="/">Speakers</InnerLinks>
       </div>
     </div>
   );
@@ -197,16 +239,16 @@ const AuthorContent = () => {
   return (
     <div className="w-64 bg-white p-6 shadow-xl">
       <div className="mb-3 space-y-3 flex flex-col">
-        <HoverLInk href="/">Tracks</HoverLInk>
-        <HoverLInk href="/">Important Dates</HoverLInk>
-        <HoverLInk href="/">Submissions</HoverLInk>
-        <HoverLInk href="/">Registrations</HoverLInk>
-        <HoverLInk href="/">Publications</HoverLInk>
-        <HoverLInk href="/">Pre-Conference Lectures</HoverLInk>
-        <HoverLInk href="/">Pre-Conference Workshops</HoverLInk>
-        <HoverLInk href="/">Broucher</HoverLInk>
-        <HoverLInk href="/">Venue</HoverLInk>
-        <HoverLInk href="/">Travel & Visa</HoverLInk>
+        <InnerLinks href="/">Tracks</InnerLinks>
+        <InnerLinks href="/">Important Dates</InnerLinks>
+        <InnerLinks href="/">Submissions</InnerLinks>
+        <InnerLinks href="/">Registrations</InnerLinks>
+        <InnerLinks href="/">Publications</InnerLinks>
+        <InnerLinks href="/">Pre-Conference Lectures</InnerLinks>
+        <InnerLinks href="/">Pre-Conference Workshops</InnerLinks>
+        <InnerLinks href="/">Broucher</InnerLinks>
+        <InnerLinks href="/">Venue</InnerLinks>
+        <InnerLinks href="/">Travel & Visa</InnerLinks>
       </div>
     </div>
   );

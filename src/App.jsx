@@ -13,7 +13,7 @@ import Research from "./components/Research";
 
 function App() {
   return (
-    <div className="text-gray-800 ">
+    <div className="">
       <Navbar />
 
       <Hero />

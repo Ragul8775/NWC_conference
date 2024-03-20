@@ -1,5 +1,5 @@
 import React from "react";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
+/* import { GoogleMap, LoadScript } from "@react-google-maps/api"; */
 import { IoPerson } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
@@ -26,17 +26,7 @@ const Location = () => {
       </div>
       <div className="flex flex-col md:flex-row  md:justify-between gap-8">
         <div id="location" className="w-1/2">
-          <LoadScript
-            googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
-          >
-            <GoogleMap
-              mapContainerStyle={containerStyle}
-              center={center}
-              zoom={10}
-            >
-              {/* Child components, such as markers, info windows, etc. */}
-            </GoogleMap>
-          </LoadScript>
+          {/*  */}/
         </div>
         <div id="address" className="">
           <h1 className="text-2xl sm:text-2xl font-medium leading-tight mb-2 text-balance text-black ">
@@ -51,7 +41,7 @@ const Location = () => {
           <div className="flex flex-col gap-4 text-xl">
             <div className="flex items-center gap-2">
               <span>
-                <IoPerson className="text-4xl"/>
+                <IoPerson className="text-4xl" />
               </span>
               <div>
                 <h3>Dr.Sasikala E</h3>
@@ -60,8 +50,7 @@ const Location = () => {
             </div>
             <div className="flex items-center gap-2">
               <span>
-              <FaPhoneAlt className="text-3xl"/>
-                
+                <FaPhoneAlt className="text-3xl" />
               </span>
               <div>
                 <h3 className="text-balance">
@@ -72,8 +61,7 @@ const Location = () => {
             </div>
             <div className="flex items-center gap-2">
               <span>
-              <IoMdMailOpen className="text-4xl"/>
-                
+                <IoMdMailOpen className="text-4xl" />
               </span>
               <div>
                 <p>example@gmail.com</p>
