@@ -1,7 +1,12 @@
 import React from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 const Hero = () => {
+  const text =
+    "Second International Conference on Recent Trends in Data Science andits Applications (ICRTDA 2023)".split(
+      " "
+    );
   return (
     <div>
       <div className="relative bg-gradient-to-r py-24 md:py-36 from-purple-600 to-blue-600 text-white overflow-hidden">
@@ -16,8 +21,19 @@ const Hero = () => {
 
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
           <h1 className=" text-3xl sm:text-4xl font-bold leading-tight mb-4 text-balance px-4 max-w-7xl">
-            Second International Conference on Recent Trends in Data Science and
-            its Applications (ICRTDA 2023)
+            {text.map((el, i) => (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.9,
+                  delay: i / 10,
+                }}
+                key={i}
+              >
+                {el}{" "}
+              </motion.span>
+            ))}
           </h1>
 
           <a

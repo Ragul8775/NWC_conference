@@ -151,7 +151,7 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
     <div
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
-      className="relative w-fit h-fit z-30"
+      className="relative w-fit h-fit "
     >
       <a href={href} className="relative text-gray-700">
         {children}
@@ -184,7 +184,7 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
 
 const AboutContent = () => {
   return (
-    <div className="w-64 bg-white p-6 shadow-xl z-50 ">
+    <div className="w-64 bg-white p-6 shadow-xl ">
       <div className="mb-3 space-y-3 flex flex-col">
         <HoverLInk href="/">About Us</HoverLInk>
         <HoverLInk href="/">Committee</HoverLInk>
