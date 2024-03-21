@@ -38,7 +38,7 @@ const PriceTabe1 = () => {
             <td className="px-6 py-4">₹6000</td>
             <td className="px-6 py-4">₹5000</td>
           </tr>
-          <tr className="bg-white dark:bg-gray-800 border-b">
+          <tr className="bg-white  border-b">
             <th
               scope="row"
               className="px-6 py-4 font-medium text-wrap text-gray-900 whitespace-nowrap "
@@ -58,7 +58,7 @@ const PriceTabe1 = () => {
             <td className="px-6 py-4">Non- IEEE members ($)</td>
             <td className="px-6 py-4">IEEE members ($)</td>
           </tr>
-          <tr className="bg-white dark:bg-gray-800">
+          <tr className="bg-white ">
             <th
               scope="row"
               className="px-6 py-4 font-medium text-wrap text-gray-900 whitespace-nowrap "
