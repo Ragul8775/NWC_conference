@@ -2,7 +2,7 @@ import React from "react";
 
 const TeamMember = ({ name, description, imageUrl }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white text-center p-4 cursor-pointer">
+    <div className="max-w-sm font-main rounded overflow-hidden shadow-lg bg-white text-center p-4 cursor-pointer">
       <img
         className="w-full  object-cover mx-auto rounded"
         src={imageUrl}

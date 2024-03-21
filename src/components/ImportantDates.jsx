@@ -1,10 +1,26 @@
 import React from "react";
 import poster from "../assets/banner.jpg";
+import { motion } from "framer-motion";
 const ImportantDates = () => {
   return (
     <div className="px-6 bg-white my-6 text-gray-500 max-w-7xl w-full font-main">
       <section className="flex flex-col md:flex-row justify-between ">
-        <div className="my-6 flex flex-col justify-between gap-6">
+        <motion.div
+          initial={{
+            opacity: 0,
+            // if odd index card,slide from right instead of left
+            x: 9 % 2 === 0 ? 50 : -50,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, // Slide in to its original position
+            transition: {
+              duration: 2, // Animation duration
+            },
+          }}
+          viewport={{ once: true }}
+          className="my-6 flex flex-col justify-between gap-6"
+        >
           <div>
             <h1 className="text-3xl sm:text-3xl font-medium leading-tight mb-4 text-balance text-black ">
               Important Dates
@@ -59,8 +75,23 @@ const ImportantDates = () => {
           <h2 className="font-semibold mt-5 text-xl">
             Registration date for selected paper is extended till March 27th
           </h2>
-        </div>
-        <div className="flex justify-center items-center">
+        </motion.div>
+        <motion.div
+          initial={{
+            opacity: 0,
+            // if odd index card,slide from right instead of left
+            x: 8 % 2 === 0 ? 50 : -50,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, // Slide in to its original position
+            transition: {
+              duration: 2, // Animation duration
+            },
+          }}
+          viewport={{ once: true }}
+          className="flex justify-center items-center"
+        >
           <img
             src={poster}
             className=" relative w-64 rounded-2xl opacity-80 "
@@ -90,7 +121,7 @@ const ImportantDates = () => {
               </svg>
             </span>
           </h2>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

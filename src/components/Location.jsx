@@ -1,20 +1,48 @@
 import React from "react";
-/* import { GoogleMap, LoadScript } from "@react-google-maps/api"; */
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import { IoPerson } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
-const containerStyle = {
-  width: "400px",
-  height: "400px",
+import { motion } from "framer-motion";
+const libraries = ["places"];
+const mapContainerStyle = {
+  width: "600px",
+  height: "50vh",
+};
+const center = {
+  lat: 12.826258659362793, // default latitude
+  lng: 80.0444107055664, // default longitude
 };
 
-const center = {
-  lat: 12.818525,
-  lng: 80.036843,
-};
 const Location = () => {
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: import.meta.env.VITE_SOME_KEY,
+    libraries,
+  });
+
+  if (loadError) {
+    return <div>Error loading maps</div>;
+  }
+
+  if (!isLoaded) {
+    return <div>Loading maps</div>;
+  }
   return (
-    <div className="px-6 bg-white my-6 text-gray-500 max-w-7xl w-full ">
+    <motion.div
+      initial={{
+        opacity: 0,
+        // if odd index card,slide from right instead of left
+        y: 8 % 2 === 0 ? 50 : -50,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0, // Slide in to its original position
+        transition: {
+          duration: 2, // Animation duration
+        },
+      }}
+      className="px-6 bg-white my-6 text-gray-500 max-w-7xl w-full "
+    >
       <h1 className="text-3xl sm:text-3xl font-medium leading-tight mb-4 text-balance text-black ">
         Conference Happens in
       </h1>
@@ -24,11 +52,19 @@ const Location = () => {
         <hr className="w-1 h-1   bg-blue-500 border-0 rounded  " />
         <hr className="w-24 h-1   bg-blue-500 border-0 rounded  " />
       </div>
-      <div className="flex flex-col md:flex-row  md:justify-between gap-8">
-        <div id="location" className="w-1/2">
-          {/*  */}/
+      <div className="flex flex-col md:flex-row  md:justify-between gap-16">
+        {/*  */}
+        <div className="flex items-center">
+          <GoogleMap
+            mapContainerStyle={mapContainerStyle}
+            zoom={15}
+            center={center}
+          >
+            <Marker position={center} />
+          </GoogleMap>
         </div>
-        <div id="address" className="">
+
+        <div id="address" className=" text-2xl font-main">
           <h1 className="text-2xl sm:text-2xl font-medium leading-tight mb-2 text-balance text-black ">
             Contact
           </h1>
@@ -70,7 +106,7 @@ const Location = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

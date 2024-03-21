@@ -4,12 +4,27 @@ import Building2 from "../assets/Building3.webp";
 import lab from "../assets/lab.jpg";
 import audi from "../assets/audi.jpg";
 import Badges from "../widgets/Badges";
-
+import { motion } from "framer-motion";
 const Introduction = () => {
   return (
     <div className="px-6 bg-white  my-8 max-w-7xl ">
       <div className="felx flex-col">
-        <section className="bg-white">
+        <motion.section
+          className="bg-white"
+          initial={{
+            opacity: 0,
+            // if odd index card,slide from right instead of left
+            x: 8 % 2 === 0 ? 200 : -200,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 2, // Animation duration
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-3xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
             <div className="font-light text-gray-500 sm:text-lg">
               <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-primaryLight font-main">
@@ -55,9 +70,24 @@ const Introduction = () => {
               />
             </div>
           </div>
-        </section>
+        </motion.section>
         <hr class="h-px my-8 bg-primaryLight border-0 " />
-        <section className="bg-white">
+        <motion.section
+          className="bg-white"
+          initial={{
+            opacity: 0,
+            // if odd index card,slide from right instead of left
+            x: 9 % 2 === 0 ? 50 : -50,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, // Slide in to its original position
+            transition: {
+              duration: 2, // Animation duration
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-3xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
             <div className=" hidden md:flex flex-wrap justify-center gap-4 mt-8">
               <img
@@ -99,7 +129,7 @@ const Introduction = () => {
               </p>
             </div>
           </div>
-        </section>
+        </motion.section>
       </div>
     </div>
   );

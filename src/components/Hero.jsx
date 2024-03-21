@@ -29,7 +29,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                  duration: 0.9,
+                  duration: 2,
                   delay: i / 10,
                 }}
                 key={i}
@@ -44,7 +44,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                  duration: 0.9,
+                  duration: 2,
                   delay: i / 10,
                 }}
                 key={i}
@@ -59,7 +59,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                  duration: 0.9,
+                  duration: 2,
                   delay: i / 10,
                 }}
                 key={i}

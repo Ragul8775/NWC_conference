@@ -57,7 +57,7 @@ const GuestandHonors = () => {
     },
   ];
   return (
-    <div className="px-6  my-6 max-w-7xl">
+    <div className="px-6  my-6 max-w-7xl font-main">
       <div>
         <h1 className="text-3xl sm:text-3xl font-medium leading-tight mb-4 text-balance  text-center">
           Chief Guest

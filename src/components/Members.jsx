@@ -1,75 +1,49 @@
 import React, { useState } from "react";
-
+import { motion } from "framer-motion";
+import { SiCodesignal } from "react-icons/si";
 const MembersData = {
   "CHIEF PATRONS": [
     "Dr.T.R.Paarivendhar, Chancellor, SRMIST",
-
-    " Dr. P.Ravi Pachamoothoo, Pro-Chancellor (Administration), SRMIST",
-
-    " Dr.P.Sathyanarayanan, Pro-Chancellor (Academics), SRMIST",
-
-    "  Dr.R.Shivakumar, Vice President, SRMIST]",
-  ],
-  PATRONS: [
-    " Dr.C.Muthamizhchelvan, Vice Chancellor, SRMIST",
-
+    "Dr. P.Ravi Pachamoothoo, Pro-Chancellor (Administration), SRMIST",
+    "Dr.P.Sathyanarayanan, Pro-Chancellor (Academics), SRMIST",
+    "Dr.R.Shivakumar, Vice President, SRMIST",
+    "Dr.C.Muthamizhchelvan, Vice Chancellor, SRMIST",
     "Dr.S.Ponnusamy, Registrar, SRMIST",
-
     "Dr.T.V.Gopal, Dean (CET), SRMIST",
-
     "Dr.B.Neppolian, Dean (Research), SRMIST",
   ],
+
   "ADVISORY BOARD MEMBERS": [
     "Dr.Revathi Venkataraman, Professor & Chairperson, School of Computing, SRMIST.",
-
     "Dr.Annapurani Panaiyappan.K, Professor & Head, Networking and Communications, SRMIST",
-
-    " Dr.M.Pushpalatha, Professor & Head, Computing Technologies, SRMIST",
-
-    " Dr.M.Lakshmi, Professor & Head, Data Science and Business Systems, SRMIST",
-
-    " Dr.R.Annie Uthra, Professor & Head, Computational Intelligence, SRMIST",
+    "Dr.M.Pushpalatha, Professor & Head, Computing Technologies, SRMIST",
+    "Dr.M.Lakshmi, Professor & Head, Data Science and Business Systems, SRMIST",
+    "Dr.R.Annie Uthra, Professor & Head, Computational Intelligence, SRMIST",
   ],
   "ADVISORY COMMITTEE ": [
-    "Dr.Revathi Venkataraman, Professor & Chairperson, School of Computing, SRMIST.",
-
-    "Dr.Annapurani Panaiyappan.K, Professor & Head, Networking and Communications, SRMIST",
-
-    " Dr.M.Pushpalatha, Professor & Head, Computing Technologies, SRMIST",
-
-    " Dr.M.Lakshmi, Professor & Head, Data Science and Business Systems, SRMIST",
-
-    " Dr.R.Annie Uthra, Professor & Head, Computational Intelligence, SRMIST",
-    "Dr.Revathi Venkataraman, Professor & Chairperson, School of Computing, SRMIST.",
-
-    "Dr.Annapurani Panaiyappan.K, Professor & Head, Networking and Communications, SRMIST",
-
-    " Dr.M.Pushpalatha, Professor & Head, Computing Technologies, SRMIST",
-
-    " Dr.M.Lakshmi, Professor & Head, Data Science and Business Systems, SRMIST",
-
-    " Dr.R.Annie Uthra, Professor & Head, Computational Intelligence, SRMIST",
+    "Dr.K.Porkumaran, Chairman, IEEE Madras Section.",
+    "Dr.P.Sakthivel, Vice Chairman-Academics, IEEE Madras Section.",
+    "Dr.R.Hariprakash, Secretary, IEEE Madras Section.",
+    "Dr.S.Radha, Treasurer, IEEE Madras Section.",
+    "Dr.D.Devaraj, Sr.Professor, Department of EEE, School of Electronics & Electrical Technology, Kalasalingam Academy of Research and Education, Krishnankoil.",
+    "Dr.S.Brindha, Professor, Department of ECE, Sri Sairam Engineering College, Chennai.",
+    "Dr.PitPichappan, Senior Scientist, Digital Information Research Labs, Chennai.",
+    "Dr.Wilfred Blessing N.R, Department of IT, College of Computing & Information Sciences, University of Technology and Applied Sciences, Ibri, Oman.",
+    "Dr.Shabnam Mohamed Aslam, Department of Information Technology, College of Computer and Information Sciences, Majmaah University, Saudi Arabia.",
+    "Dr.Lim Tien Sze, Associate Professor, Faculty of Engineering and Technology (FET), Multimedia University, Melaka.",
+    "Dr.Valentina E. Balas, Professor of Automation and Applied Informatics, AurelVlaicu University of Arad, ROMANIA, Canada.",
+    "Dr.JeyrajSelvaraj, Associate Professor, UMPEDAC, University Malaya.",
+    "Dr.RamaSamy Naidu, King Faisal University, Government University under Ministry of Education, Kingdom of Saudi Arabia.",
   ],
   "CONFERENCE CHAIR": [
-    " Dr.M.Pushpalatha, Professor & Head, Computing Technologies, SRMIST",
-
-    " Dr.M.Lakshmi, Professor & Head, Data Science and Business Systems, SRMIST",
-
-    " Dr.R.Annie Uthra, Professor & Head, Computational Intelligence, SRMIST",
-    "Dr.Revathi Venkataraman, Professor & Chairperson, School of Computing, SRMIST.",
-
     "Dr.Annapurani Panaiyappan.K, Professor & Head, Networking and Communications, SRMIST",
-
-    " Dr.M.Pushpalatha, Professor & Head, Computing Technologies, SRMIST",
-
-    " Dr.M.Lakshmi, Professor & Head, Data Science and Business Systems, SRMIST",
   ],
   " CONVENER": ["Dr. Sasikala E, Professor, DSBS, SRMIST"],
 };
 const Members = () => {
   const [activeTab, setActiveTab] = useState("CHIEF PATRONS");
   return (
-    <div className=" bg-blue-900 text-white max-w-7xl w-full h-auto font-main">
+    <div className=" bg-primaryLight text-white max-w-7xl w-full h-auto font-main">
       <div className="flex flex-col justify-center items-center my-4">
         <h1 className="text-3xl sm:text-3xl font-medium leading-tight mb-4 text-balance text-white ">
           COMMITTEE
@@ -81,15 +55,29 @@ const Members = () => {
           <hr className="w-24 h-1   bg-white border-0 rounded  " />
         </div>
       </div>
-      <div className="flex">
+      <motion.div
+        initial={{
+          opacity: 0,
+          // if odd index card,slide from right instead of left
+          y: 9 % 2 === 0 ? 50 : -50,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0, // Slide in to its original position
+          transition: {
+            duration: 2, // Animation duration
+          },
+        }}
+        className="flex"
+      >
         <div className="w-1/4  border-r-4 border-yellow-400 text-xl font-semibold">
           {Object.keys(MembersData).map((role) => (
             <button
               key={role}
               className={`text-left w-full ${
                 activeTab === role
-                  ? "bg-blue-600"
-                  : "bg-blue-900 hover:bg-blue-700"
+                  ? "bg-primary"
+                  : "bg-primaryLight hover:bg-blue-700"
               } px-4 py-6 `}
               onClick={() => setActiveTab(role)}
             >
@@ -98,18 +86,22 @@ const Members = () => {
           ))}
         </div>
         <div className="w-3/4 ">
-          <div className=" border-yellow-400 bg-blue-900 p-4 h-full">
+          <div className=" border-yellow-400 bg-primary p-4 h-full">
             <h3 className="text-2xl font-bold mb-4">{activeTab}</h3>
-            <ul className="list-disc list-inside">
+            <ul className="list-inside">
               {MembersData[activeTab].map((member, index) => (
-                <li key={index} className="mb-4 text-xl">
+                <li
+                  key={index}
+                  className="mb-4 text-xl flex items-center gap-5"
+                >
+                  <SiCodesignal />
                   {member}
                 </li>
               ))}
             </ul>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

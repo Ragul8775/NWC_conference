@@ -5,6 +5,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
 import HoverLInk from "../widgets/HoverLInk";
 import InnerLinks from "../widgets/InnerLInks";
+import { Link } from "react-scroll";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -21,14 +22,14 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const [isOpen, setIsOpen] = useState(false); // State to handle mobile menu toggle
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1, // Delay between each child animation
-        delayChildren: 0.2, // Initial delay before starting the children animations
+        delayChildren: 0.1, // Initial delay before starting the children animations
       },
     },
   };
@@ -46,7 +47,7 @@ const Navbar = () => {
       },
     },
   };
-
+  const navbarHeight = -60;
   return (
     <motion.nav
       initial={{ opacity: 0 }}
@@ -73,7 +74,9 @@ const Navbar = () => {
             {/* Primary Navbar items */}
             <div className="hidden md:flex items-center space-x-1 ">
               <div className="py-5 px-3 ">
-                <HoverLInk>HOME</HoverLInk>
+                <Link to="home" smooth={true} duration={500}>
+                  <HoverLInk>HOME</HoverLInk>
+                </Link>
               </div>
               <div className="flex  justify-center  py-5 px-3 ">
                 <FlyoutLink href="#" FlyoutContent={AboutContent}>
@@ -85,9 +88,7 @@ const Navbar = () => {
                   AUTHORS
                 </FlyoutLink>
               </div>
-              <div className="py-5 px-3">
-                <HoverLInk>SPONSORS</HoverLInk>
-              </div>
+
               <div className="py-5 px-3">
                 <HoverLInk>CONTACT</HoverLInk>
               </div>
@@ -169,7 +170,7 @@ const Navbar = () => {
 
 const FlyoutLink = ({ children, href, FlyoutContent }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const navbarHeight = -60;
   useEffect(() => {
     const handleScroll = () => {
       // Set isScrolled to true if page is scrolled more than 50px, otherwise false
@@ -227,30 +228,61 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
 };
 
 const AboutContent = () => {
+  const navbarHeight = -60;
   return (
     <div className="w-64 bg-white p-6 shadow-xl ">
       <div className="mb-3 space-y-3 flex flex-col ">
-        <InnerLinks href="/">About Us</InnerLinks>
-        <InnerLinks href="/">Committee</InnerLinks>
-        <InnerLinks href="/">Speakers</InnerLinks>
+        <Link to="about" smooth={true} duration={500} offset={navbarHeight}>
+          <InnerLinks href="/">About Us</InnerLinks>
+        </Link>
+        <Link to="commite" smooth={true} duration={500} offset={navbarHeight}>
+          <InnerLinks href="/">Committee</InnerLinks>
+        </Link>
+        <Link to="honours" smooth={true} duration={500} offset={navbarHeight}>
+          <InnerLinks href="/">Speakers</InnerLinks>
+        </Link>
       </div>
     </div>
   );
 };
 const AuthorContent = () => {
+  const navbarHeight = -60;
   return (
     <div className="w-64 bg-white p-6 shadow-xl">
       <div className="mb-3 space-y-3 flex flex-col">
-        <InnerLinks href="/">Tracks</InnerLinks>
-        <InnerLinks href="/">Important Dates</InnerLinks>
-        <InnerLinks href="/">Submissions</InnerLinks>
-        <InnerLinks href="/">Registrations</InnerLinks>
-        <InnerLinks href="/">Publications</InnerLinks>
-        <InnerLinks href="/">Pre-Conference Lectures</InnerLinks>
-        <InnerLinks href="/">Pre-Conference Workshops</InnerLinks>
-        <InnerLinks href="/">Broucher</InnerLinks>
-        <InnerLinks href="/">Venue</InnerLinks>
-        <InnerLinks href="/">Travel & Visa</InnerLinks>
+        <Link
+          to="importantdates"
+          smooth={true}
+          duration={500}
+          offset={navbarHeight}
+        >
+          {" "}
+          <InnerLinks href="/">Important Dates</InnerLinks>
+        </Link>
+        <Link to="paper" smooth={true} duration={500} offset={navbarHeight}>
+          {" "}
+          <InnerLinks href="/">Submissions</InnerLinks>
+        </Link>
+        <Link to="paper" smooth={true} duration={500} offset={navbarHeight}>
+          {" "}
+          <InnerLinks href="/">Registrations</InnerLinks>
+        </Link>
+        <Link to="counter" smooth={true} duration={500} offset={navbarHeight}>
+          <InnerLinks href="/">Publications</InnerLinks>
+        </Link>
+
+        <Link
+          to="importantdates"
+          smooth={true}
+          duration={500}
+          offset={navbarHeight}
+        >
+          <InnerLinks href="/">Broucher</InnerLinks>
+        </Link>
+        <Link to="location" smooth={true} duration={500} offset={navbarHeight}>
+          {" "}
+          <InnerLinks href="/">Venue</InnerLinks>
+        </Link>
       </div>
     </div>
   );
