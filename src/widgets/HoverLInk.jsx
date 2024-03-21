@@ -20,9 +20,7 @@ const HoverLInk = ({ href, children }) => {
   return (
     <a
       href={href}
-      className={`relative text-gray-700 ${
-        isScrolled ? "text-gray-800" : "text-gray-300 "
-      }`}
+      className={`relative ${isScrolled ? "text-gray-800" : "text-gray-300 "}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

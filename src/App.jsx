@@ -27,15 +27,16 @@ function App() {
       <div className="flex justify-center">
         <ImportantDates />
       </div>
+      <div className="mx-auto   bg-blue-900  w-full flex justify-center items center ">
+        <Members />
+      </div>
       <div className="mx-auto   bg-blue-100 w-full flex justify-center items center ">
         <FeeAndPaper />
       </div>
       <div className="flex justify-center">
         <GuestandHonors />
       </div>
-      <div className="mx-auto   bg-blue-900  w-full flex justify-center items center ">
-        <Members />
-      </div>
+
       <div className="mx-auto   bg-blue-100 w-full flex justify-center items center ">
         <Conference />
       </div>

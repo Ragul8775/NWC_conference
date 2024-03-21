@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         main: ["Oswald"],
         inter: ["Inter"],
+        written: ["Cabin Sketch"],
       },
     },
   },

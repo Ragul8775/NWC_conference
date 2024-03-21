@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../assets/LOgo.png";
+import Logo1 from "../assets/Logo1.png";
 import { IoCloseSharp } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
 import HoverLInk from "../widgets/HoverLInk";
@@ -57,15 +58,16 @@ const Navbar = () => {
           : "backdrop-blur-sm bg-transparent "
       }`}
     >
-      <div className="max-w-6xl  mx-auto px-4">
+      <div className="max-w-7xl  mx-auto ">
         <div className="flex justify-between md:inline ">
-          <div className="flex justify-around space-x-4">
+          <div className="flex justify-between space-x-4">
             <div>
-              <a
-                href="#"
-                className="flex items-center py-2 px-2 text-gray-300  "
-              >
-                <img src={Logo} width={140} className="w-40 lg:w-48" />
+              <a href="#" className="flex items-center  px-2 text-gray-300  ">
+                {isScrolled ? (
+                  <img src={Logo} width={140} className="w-40 lg:w-48" />
+                ) : (
+                  <img src={Logo1} width={140} className="w-40 lg:w-48" />
+                )}
               </a>
             </div>
             {/* Primary Navbar items */}

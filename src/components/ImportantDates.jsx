@@ -2,18 +2,20 @@ import React from "react";
 import poster from "../assets/banner.jpg";
 const ImportantDates = () => {
   return (
-    <div className="px-6 bg-white my-6 text-gray-500 max-w-7xl w-full">
-      <h1 className="text-3xl sm:text-3xl font-medium leading-tight mb-4 text-balance text-black ">
-        Important Dates
-      </h1>
-      <div className="flex justify-start gap-3 items-center">
-        <hr className="w-1 h-1   bg-blue-500 border-0 rounded  " />
-        <hr className="w-1 h-1   bg-blue-500 border-0 rounded  " />
-        <hr className="w-1 h-1   bg-blue-500 border-0 rounded  " />
-        <hr className="w-24 h-1   bg-blue-500 border-0 rounded  " />
-      </div>
+    <div className="px-6 bg-white my-6 text-gray-500 max-w-7xl w-full font-main">
       <section className="flex flex-col md:flex-row justify-between ">
-        <div className="my-6 flex flex-col justify-between">
+        <div className="my-6 flex flex-col justify-between gap-6">
+          <div>
+            <h1 className="text-3xl sm:text-3xl font-medium leading-tight mb-4 text-balance text-black ">
+              Important Dates
+            </h1>
+            <div className="flex justify-start gap-3 items-center">
+              <hr className="w-1 h-1   bg-blue-500 border-0 rounded  " />
+              <hr className="w-1 h-1   bg-blue-500 border-0 rounded  " />
+              <hr className="w-1 h-1   bg-blue-500 border-0 rounded  " />
+              <hr className="w-24 h-1   bg-blue-500 border-0 rounded  " />
+            </div>
+          </div>
           <table className="w-full text-xl text-left rtl:text-right text-gray-500 ">
             <tbody>
               <tr className="bg-white border ">
@@ -23,9 +25,7 @@ const ImportantDates = () => {
                 >
                   Submission of Abstract
                 </th>
-                <td className="px-6 py-4">
-                  15th August, 2025 
-                </td>
+                <td className="px-6 py-4">15th February, 2025</td>
               </tr>
               <tr className="bg-white border ">
                 <th
@@ -34,9 +34,7 @@ const ImportantDates = () => {
                 >
                   Submission of Full Paper
                 </th>
-                <td className="px-6 py-4">
-                  20th August, 2025 
-                </td>
+                <td className="px-6 py-4">1st March, 2025</td>
               </tr>
               <tr className="bg-white border ">
                 <th
@@ -45,9 +43,7 @@ const ImportantDates = () => {
                 >
                   Authors Notification
                 </th>
-                <td className="px-6 py-4">
-                  28th August, 2025 
-                </td>
+                <td className="px-6 py-4">10th March, 2025</td>
               </tr>
               <tr className="bg-white border ">
                 <th
@@ -56,9 +52,7 @@ const ImportantDates = () => {
                 >
                   Final Manuscript Due
                 </th>
-                <td className="px-6 py-4">
-                  10th September, 2025 
-                </td>
+                <td className="px-6 py-4">20th March, 2025</td>
               </tr>
             </tbody>
           </table>

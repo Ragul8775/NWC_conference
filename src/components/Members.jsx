@@ -69,10 +69,10 @@ const MembersData = {
 const Members = () => {
   const [activeTab, setActiveTab] = useState("CHIEF PATRONS");
   return (
-    <div className=" bg-blue-900 text-white max-w-7xl w-full h-auto">
+    <div className=" bg-blue-900 text-white max-w-7xl w-full h-auto font-main">
       <div className="flex flex-col justify-center items-center my-4">
         <h1 className="text-3xl sm:text-3xl font-medium leading-tight mb-4 text-balance text-white ">
-          Important Dates
+          COMMITTEE
         </h1>
         <div className="flex justify-start gap-3 items-center">
           <hr className="w-1 h-1   bg-white border-0 rounded  " />
