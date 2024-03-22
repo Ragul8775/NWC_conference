@@ -4,11 +4,11 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 const Hero = () => {
-  const text1 = "2nd International Conference on".split(" ");
-  const text2 = "Recent Trends in Data Science and its Applications ".split(
+  const text1 = "International Conference on".split(" ");
+  const text2 = "Data Science And Business Systems ".split(
     " "
   );
-  const text3 = "(ICRTDA 2025)".split(" ");
+  const text3 = "(ICDSBS 2025)".split(" ");
   const text4 = "(17th-18th,April,2025)".split(" ");
 
   return (
