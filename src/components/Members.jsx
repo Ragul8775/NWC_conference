@@ -10,7 +10,7 @@ const MembersData = {
     "Dr.C.Muthamizhchelvan, Vice Chancellor, SRMIST",
     "Dr.S.Ponnusamy, Registrar, SRMIST",
     "Dr.T.V.Gopal, Dean (CET), SRMIST",
-    "Dr.B.Neppolian, Dean (Research), SRMIST",
+    
   ],
 
   "ADVISORY BOARD MEMBERS": [
@@ -36,9 +36,18 @@ const MembersData = {
     "Dr.RamaSamy Naidu, King Faisal University, Government University under Ministry of Education, Kingdom of Saudi Arabia.",
   ],
   "CONFERENCE CHAIR": [
-    "Dr.Annapurani Panaiyappan.K, Professor & Head, Networking and Communications, SRMIST",
+    "Dr.Revathi Venkataraman, Professor & Chairperson, School of Computing, SRMIST.",
+    "Dr.M.Lakshmi, Professor & Head, Data Science and Business Systems, SRMIST",
   ],
-  " CONVENER": ["Dr. Sasikala E, Professor, DSBS, SRMIST"],
+  " CONVENER": [
+    "Dr. Kavitha V, Professor, DSBS, SRMIST",
+    "Dr. Sasikala E, Professor, DSBS, SRMIST"],
+    " CO-CONVENER": [
+      "Dr. A. Murugan, Professor, DSBS, SRMIST",
+      "Dr. S. Ganesh Kumar, Professor, DSBS, SRMIST"],
+      "   EXECUTIVE COMMITTEE": [
+        "Dr. A. Murugan, Professor, DSBS, SRMIST",
+        "Dr. S. Ganesh Kumar, Professor, DSBS, SRMIST"],
 };
 const Members = () => {
   const [activeTab, setActiveTab] = useState("CHIEF PATRONS");
