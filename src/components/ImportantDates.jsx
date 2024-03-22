@@ -72,9 +72,9 @@ const ImportantDates = () => {
               </tr>
             </tbody>
           </table>
-          <h2 className="font-semibold mt-5 text-xl">
+          {/* <h2 className="font-semibold mt-5 text-xl">
             Registration date for selected paper is extended till March 27th
-          </h2>
+          </h2> */}
         </motion.div>
         <motion.div
           initial={{

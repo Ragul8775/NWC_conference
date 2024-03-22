@@ -15,9 +15,9 @@ const MembersData = {
 
   "ADVISORY BOARD MEMBERS": [
     "Dr.Revathi Venkataraman, Professor & Chairperson, School of Computing, SRMIST.",
-    "Dr.Annapurani Panaiyappan.K, Professor & Head, Networking and Communications, SRMIST",
-    "Dr.M.Pushpalatha, Professor & Head, Computing Technologies, SRMIST",
     "Dr.M.Lakshmi, Professor & Head, Data Science and Business Systems, SRMIST",
+  "Dr.M.Pushpalatha, Professor & Head, Computing Technologies, SRMIST",
+    "Dr.Annapurani Panaiyappan.K, Professor & Head, Networking and Communications, SRMIST",
     "Dr.R.Annie Uthra, Professor & Head, Computational Intelligence, SRMIST",
   ],
   "ADVISORY COMMITTEE ": [
