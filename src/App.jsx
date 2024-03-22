@@ -63,7 +63,7 @@ function App() {
           bottom: "0",
           right: "20px",
           zIndex: 1000,
-          marginBottom: "80px",
+          marginBottom: "40px",
         }}
       >
         <CircleIndicator />

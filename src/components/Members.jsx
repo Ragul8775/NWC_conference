@@ -44,10 +44,11 @@ const MembersData = {
     "Dr. Sasikala E, Professor, DSBS, SRMIST"],
     " CO-CONVENER": [
       "Dr. A. Murugan, Professor, DSBS, SRMIST",
-      "Dr. S. Ganesh Kumar, Professor, DSBS, SRMIST"],
-      "   EXECUTIVE COMMITTEE": [
-        "Dr. A. Murugan, Professor, DSBS, SRMIST",
-        "Dr. S. Ganesh Kumar, Professor, DSBS, SRMIST"],
+      "Dr. S. Ganesh Kumar, Professor, DSBS, SRMIST",
+      "Dr. N. Parthiban,Associate Professor, DSBS, SRMIST"],
+
+      "EXECUTIVE COMMITTEE": [
+       ],
 };
 const Members = () => {
   const [activeTab, setActiveTab] = useState("CHIEF PATRONS");
