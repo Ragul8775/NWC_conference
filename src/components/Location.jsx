@@ -80,8 +80,8 @@ const Location = () => {
                 <IoPerson className="text-4xl" />
               </span>
               <div>
-                <h3>Dr.Sasikala E</h3>
-                <p>Professor, DSBS, SRMIST</p>
+                <h3>Dr. P. Kanmani</h3>
+                <p>Assistant Professor, DSBS, SRMIST</p>
               </div>
             </div>
             <div className="flex items-center gap-2">

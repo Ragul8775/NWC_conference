@@ -8,7 +8,8 @@ const Hero = () => {
   const text2 = "Recent Trends in Data Science and its Applications ".split(
     " "
   );
-  const text3 = "(ICRTDA 2023)".split(" ");
+  const text3 = "(ICRTDA 2025)".split(" ");
+  const text4 = "(17th-18th,April,2025)".split(" ");
 
   return (
     <div>
@@ -68,7 +69,21 @@ const Hero = () => {
               </motion.span>
             ))}
           </h1>
+          <h1 className=" text-3xl sm:text-3xl font-bold font-inter leading-tight mb-4 w-3/4 text-wrap px-4 max-w-7xl opacity-85">
+            
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 2,
+                  delay: 7 / 10,
+                }}
+                
+              >
+                17<sup>th</sup>-18<sup>th</sup> April 2025
+              </motion.span>
 
+          </h1>
           {/*  <motion.a
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
