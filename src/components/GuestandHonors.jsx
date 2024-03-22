@@ -68,7 +68,7 @@ const GuestandHonors = () => {
           <hr className="w-1 h-1   bg-blue-500 border-0 rounded  " />
           <hr className="w-16 h-1   bg-blue-500 border-0 rounded  " />
         </div>
-        <div className="flex justify-center items-center gap-4 mb-8">
+{/*         <div className="flex justify-center items-center gap-4 mb-8">
           <TeamMember
             name="Bonnie Green"
             description="Bonnie drives the technical strategy of the Themesberg platform and brand."
@@ -115,8 +115,8 @@ const GuestandHonors = () => {
                 imageUrl={member.imageUrl}
               />
             ))}
-          </div>
-        </div>
+          </div> 
+        </div>*/}
       </div>
     </div>
   );

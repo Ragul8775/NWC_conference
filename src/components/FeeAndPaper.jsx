@@ -61,7 +61,7 @@ const FeeAndPaper = () => {
             <hr className="w-1 h-1   bg-blue-500 border-0 rounded  " />
             <hr className="w-24 h-1   bg-blue-500 border-0 rounded  " />
           </div>
-          <p className="mt-4 text-xl">
+         {/*  <p className="mt-4 text-xl text-justify">
             Prospective authors are kindly invited to submit full text papers
             including results, tables, figures, and references. Full text papers
             (.pdf, .doc) will be accepted by Paper Submission Link tab at the
@@ -103,15 +103,17 @@ const FeeAndPaper = () => {
               IOS series Journal (Awaiting Approval)
             </li>
           </ul>
+          */}
           <div className="mt-4 text-xl">
-            <h2 className="font-bold">Paper submission through</h2>
+            {/* <h2 className="font-bold">Paper submission through</h2>
             <a
               href={`mailto:${emailAddress}`}
               className="text-blue-800 hover:underline"
             >
               example@example.com
-            </a>
-          </div>
+            </a> */}
+            <h1>To Be Completed...</h1>
+          </div> 
         </div>
       </motion.section>
     </div>

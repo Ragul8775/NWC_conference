@@ -10,8 +10,8 @@ const mapContainerStyle = {
   height: "50vh",
 };
 const center = {
-  lat: 12.826258659362793, // default latitude
-  lng: 80.0444107055664, // default longitude
+  lat: 12.826258659362793,
+  lng: 80.0444107055664, 
 };
 
 const Location = () => {
@@ -90,8 +90,7 @@ const Location = () => {
               </span>
               <div>
                 <h3 className="text-balance">
-                  +91-9626611060 | +91-8838222378 | +91-9894371680 |
-                  +91-9962572473
+                  +91-9976916147
                 </h3>
               </div>
             </div>

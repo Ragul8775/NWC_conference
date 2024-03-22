@@ -25,15 +25,7 @@ const MembersData = {
     "Dr.P.Sakthivel, Vice Chairman-Academics, IEEE Madras Section.",
     "Dr.R.Hariprakash, Secretary, IEEE Madras Section.",
     "Dr.S.Radha, Treasurer, IEEE Madras Section.",
-    "Dr.D.Devaraj, Sr.Professor, Department of EEE, School of Electronics & Electrical Technology, Kalasalingam Academy of Research and Education, Krishnankoil.",
-    "Dr.S.Brindha, Professor, Department of ECE, Sri Sairam Engineering College, Chennai.",
-    "Dr.PitPichappan, Senior Scientist, Digital Information Research Labs, Chennai.",
-    "Dr.Wilfred Blessing N.R, Department of IT, College of Computing & Information Sciences, University of Technology and Applied Sciences, Ibri, Oman.",
-    "Dr.Shabnam Mohamed Aslam, Department of Information Technology, College of Computer and Information Sciences, Majmaah University, Saudi Arabia.",
-    "Dr.Lim Tien Sze, Associate Professor, Faculty of Engineering and Technology (FET), Multimedia University, Melaka.",
-    "Dr.Valentina E. Balas, Professor of Automation and Applied Informatics, AurelVlaicu University of Arad, ROMANIA, Canada.",
-    "Dr.JeyrajSelvaraj, Associate Professor, UMPEDAC, University Malaya.",
-    "Dr.RamaSamy Naidu, King Faisal University, Government University under Ministry of Education, Kingdom of Saudi Arabia.",
+    
   ],
   "CONFERENCE CHAIR": [
     "Dr.Revathi Venkataraman, Professor & Chairperson, School of Computing, SRMIST.",

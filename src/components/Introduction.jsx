@@ -30,7 +30,7 @@ const Introduction = () => {
               <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-primaryLight font-main">
                 About SRM
               </h2>
-              <p className="mb-4 font-main font-medium">
+              <p className="mb-4 font-main font-medium  text-justify">
                 SRM Institute of Science and Technology is a part of the
                 prestigious SRM Group of Educational Institutions, one of
                 India’s leading institutes. It is established in 1985 by the
@@ -51,10 +51,10 @@ const Introduction = () => {
                 academic year 2023 under university category. It is also
                 positioned 301 to 350 in QS University Rankings – Asia.
               </p>
-              <p className="mb-4 font-main font-medium">
+              {/* <p className="mb-4 font-main font-medium text-justify">
                 We are strategists, designers and developers. Innovators and
                 problem solvers. Small enough to be simple and quick.
-              </p>
+              </p> */}
               <Badges />
             </div>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
@@ -105,7 +105,7 @@ const Introduction = () => {
               <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-primaryLight font-main">
                 About the department
               </h2>
-              <p className="mb-4 font-main font-medium">
+              <p className="mb-4 font-main font-medium text-justify">
                 The School of Computing is the largest in the SRM family with
                 over 10000 students and 500 faculty members. The School hosts
                 four departments namely Computing Technologies, Networking and
@@ -123,10 +123,10 @@ const Introduction = () => {
                 committed to impart sound domain knowledge in mathematics,
                 business system and engineering sciences.
               </p>
-              <p className="mb-4 font-main font-medium">
+              {/* <p className="mb-4 font-main font-medium text-justify">
                 We are strategists, designers and developers. Innovators and
                 problem solvers. Small enough to be simple and quick.
-              </p>
+              </p> */}
             </div>
           </div>
         </motion.section>

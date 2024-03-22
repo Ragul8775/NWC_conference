@@ -96,9 +96,9 @@ const Hero = () => {
         </div>
       </div>
       <div>
-        <div class="scroll-downs flex flex-col justify-center items-center gap-2">
-          <div class="mousey">
-            <div class="scroller"></div>
+        <div className="hidden scroll-downs sm:flex flex-col justify-center items-center gap-2">
+          <div className="mousey">
+            <div className="scroller"></div>
           </div>
           <p class="scrol text-center font-mono opacity-70 animate-bounce">
             [-Scroll-]
